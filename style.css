@@ -104,7 +104,7 @@ li{
   height: 80px;
   width: 80px;
   border-radius: 15px;
-  margin: 17px 17px 17px 17px;
+  margin: 19px;
   display: inline-block;
   vertical-align: top;
   text-align: center;
@@ -131,30 +131,65 @@ h4{
   text-decoration: underline;
   text-align: center;
 }
+
 /* First App */
 #phone{
   background-color: #202020;
 }
+
 /* Second App */
 #crim-database{
   background-color: #202020;
 }
 .cdr{
   height: 150px;
-  border: 1px solid black;
   margin-top: 1px;
+}
+.cds{
+  height: 100%;
+  width: 45%;
+  margin: 5px;
+  display: inline-block;
 }
 #cdr1{
   height: 40px;
+  margin: 20px 0 -20px 7px;
 }
 #cdrsubmit{
   height: 40px;
   width: 100%;
 }
 #cdsubmit{
-  margin: 0 125px 0 125px;
+  margin: 15px 125px 0 125px;
   width: 125px;
 }
+#crim-database-results{
+  display: none;
+  background-color: #202020;
+}
+.category{
+  text-decoration: underline;
+}
+#crim-database p{
+  line-height: 10px;
+}
+.attribute{
+  text-decoration: none;
+  color: green;
+}
+.attribute:hover{
+  font-size: 14px;
+  cursor: pointer;
+}
+.strikethru{
+  text-decoration: line-through;
+  color: red;
+}
+.strikethru:hover{
+  font-size: 14px;
+  cursor: pointer;
+}
+
 /* Third App */
 #notepad{
   background-color: #F3F781;
@@ -175,25 +210,31 @@ h4{
   font-weight: 700;
   font-family: 'Indie Flower', cursive;
 }
+
 /* Fourth App */
 #travel{
   background-color: #202020;
 }
+
 /* Fifth App */
 #youtube{
   height:; 400px;
 }
+
 /* Seventh App */
 #wikipedia{
   background-color: beige;
   color: black;
 }
+
 /* Eighth App */
 #map{}
+
 /* Ninth App */
 #translate{
   background-color: hotpink;
 }
+
 /* Tenth App */
 #music{
   background-color: teal;

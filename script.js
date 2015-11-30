@@ -35,39 +35,94 @@ function Suspect(name, sex, hair, eyes, feature, vehicle){
   this.feature = feature;
   this.vehicle = vehicle;
 }
-var suspect1 = new Suspect('suspect1','female','black','brown','baseball cap','motorcycle');
+var suspect1 = new Suspect('suspect1','female','black','brownn','baseball cap','motorcycle');
 var suspect2 = new Suspect('suspect2','male','black','hazel','baseball cap','hummer');
-var suspect3 = new Suspect('suspect3','female','black','brown','puppy','hoverboard');
-var suspect4 = new Suspect('suspect4','male','black','brown','scarf','convertible');
+var suspect3 = new Suspect('suspect3','female','black','brownn','puppy','hoverboard');
+var suspect4 = new Suspect('suspect4','male','black','brownn','scarf','convertible');
 
-var suspect5 = new Suspect('suspect5','female','brown','brown','scarf','prius');
+var suspect5 = new Suspect('suspect5','female','brown','brownn','scarf','prius');
 var suspect6 = new Suspect('suspect6','male','brown','blue','glasses','prius');
-var suspect7 = new Suspect('suspect7','female','brown','brown','scarf','convertible');
+var suspect7 = new Suspect('suspect7','female','brown','brownn','scarf','convertible');
 var suspect8 = new Suspect('suspect8','male','brown','hazel','glasses','motorcycle');
 
 var suspect9 = new Suspect('suspect9','female','brown','hazel','earings','hoverboard');
 var suspect10 = new Suspect('suspect10','male','brown','blue','baseball cap','convertible');
-var suspect11 = new Suspect('suspect11','female','brown','brown','baseball cap','convertible');
-var suspect12 = new Suspect('suspect12','male','brown','brown','glasses','motorcycle');
+var suspect11 = new Suspect('suspect11','female','brown','brownn','baseball cap','convertible');
+var suspect12 = new Suspect('suspect12','male','brown','brownn','glasses','motorcycle');
 
-var suspect13 = new Suspect('suspect13','female','red','brown','puppy','motorcycle');
+var suspect13 = new Suspect('suspect13','female','red','brownn','puppy','motorcycle');
 var suspect14 = new Suspect('suspect14','male','red','blue','puppy','hoverboard');
-var suspect15 = new Suspect('suspect15','female','blonde','earings','glasses','hummer');
-var suspect16 = new Suspect('suspect16','male','blonde','earings','glasses','prius');
+var suspect15 = new Suspect('suspect15','female','blond','blue','earings','hummer');
+var suspect16 = new Suspect('suspect16','male','blond','brownn','earings','prius');
 
-var suspect17 = new Suspect('suspect17','female','blonde','brown','glasses','hummer');
+var suspect17 = new Suspect('suspect17','female','blond','brownn','glasses','hummer');
 var suspect18 = new Suspect('suspect18','male','white','blue','earings','prius');
-var suspect19 = new Suspect('suspect19','female','white','brown','scarf','hoverboard');
-var suspect20 = new Suspect('suspect20','male','white','brown','puppy','hummer');
+var suspect19 = new Suspect('suspect19','female','white','brownn','scarf','hoverboard');
+var suspect20 = new Suspect('suspect20','male','white','brownn','puppy','hummer');
 
 // Variables for the set of all remaining suspects and the guilt suspect
 var allSuspects = [suspect1,suspect2,suspect3,suspect4,suspect5,suspect6,suspect7,suspect8,suspect9,suspect10,suspect11,suspect12,suspect13,suspect14,suspect15,suspect16,suspect17,suspect18,suspect19,suspect20];
 var guiltySuspect = '';
 
-// Function to get guilty suspect
+// NewGame creates a random guilty suspect
 function newGame(){
-  var randomSuspect = '';
+  guiltySuspect = allSuspects[Math.floor(Math.random()*20)];
 }
+
+// When an attribute is clicked, the strikethru class is toggled.
+$('.attribute').click(function(){
+  $(this).toggleClass('strikethru');
+  $(this).toggleClass('attribute');
+})
+
+// Check if suspect fits parameters
+function suspectCheck(){
+  var availableAttributes = []
+  for(i=0;i<$('.attribute').length;i++){
+    availableAttributes.push($('.attribute').eq(i).html())
+  }
+  return availableAttributes;
+}
+
+
+/*/ These functions grab all the striked attributes
+function strikedGenders(){
+  var genderArray = [];
+  if($('#gender-male').hasClass('strikethru')){
+    genderArray.push('male');
+  }
+}*/
+
+// FilterSuspects takes the user's suspect paramenters and prints all
+// suspects that may be guilty
+function filterSuspects(){
+  var possibleSuspects = allSuspects;
+  var possibleSuspectsString = '';
+  checkArray = suspectCheck();
+  for(i=0;i<possibleSuspects.length;i++){
+    var counter = 0
+    for(j=0;j<checkArray.length;j++){
+      if(possibleSuspects[i].sex === checkArray[j].toLowerCase()){counter ++;}
+      if(possibleSuspects[i].hair === checkArray[j].toLowerCase()){counter ++;}
+      if(possibleSuspects[i].eyes === checkArray[j].toLowerCase()){counter ++;}
+      if(possibleSuspects[i].feature === checkArray[j].toLowerCase()){counter ++;}
+      if(possibleSuspects[i].vehicle === checkArray[j].toLowerCase()){counter ++;}
+    }
+    if(counter === 5){
+      possibleSuspectsString += possibleSuspects[i].name;
+      possibleSuspectsString += ', ';
+    }
+  }
+  return possibleSuspectsString.substring(0, possibleSuspectsString.length - 2);
+}
+
+// When the 'Search Database' button is clicked, the function runs
+// filterSuspects and prints possibleSuspects to the search database app
+$('#cdsubmit').click(function(){
+  $('#crim-database-results').css('display', 'block');
+  $('#crim-database').css('display', 'none');
+  $('#possible-suspects').html(filterSuspects());
+})
 
 
 
@@ -191,8 +246,11 @@ $('#10').click(function(){
   $('#music').css('display', 'block');
 })
 
-losangeles.changeAll();
 
+
+// At the start run these
+losangeles.changeAll();
+newGame();
 
 
 
