@@ -218,7 +218,12 @@ h4{
 
 /* Fifth App */
 #youtube{
-  height:; 400px;
+  height: 400px;
+}
+
+/* Sixth App */
+#investigate{
+  background-color: #202020;
 }
 
 /* Seventh App */
@@ -285,5 +290,5 @@ hr{
 }
 p{
   margin: 10px;
-  line-height: 30px
+  line-height: 25px
 }

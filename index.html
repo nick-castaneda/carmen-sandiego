@@ -20,7 +20,7 @@
           <li>Dt. <span id='player'></span></li>
           <li>Rank: <span id='rank'></span></li>
           <li>Location: <span id='location'></span></li>
-          <li>Time Remaining: <span id='time-remaining'></span></li>
+          <li>Time Left: <span id='time-remaining'></span> Hours</li>
         </ul>
       </div>
     </div>
@@ -31,30 +31,30 @@
         <!--Home is the main div that holds all the app icons-->
         <div id='home'>
           <div class='row' id='row1'>
-            <div id='1' class='app'><img class='app-logo' src='images/sm-phone.png'></div>
+            <div id='1' class='app'><img class='app-logo' src='images/sm-apps/sm-phone.png'></div>
             <div id='2' class='app' style='background-color: teal'>Criminal Database</div>
-            <div id='3' class='app'><img class='app-logo' src='images/sm-notepad.png'></div>
+            <div id='3' class='app'><img class='app-logo' src='images/sm-apps/sm-notepad.png'></div>
           </div>
           <div class='row'>
-            <div id='4' class='app'><img class='app-logo' src='images/sm-jetblue.png'></div>
-            <div id='5' class='app'><img class='app-logo' src='images/sm-youtube.png'></div>
-            <a href='http://www.yelp.com' target="_blank"><div id='6' class='app'><img class='app-logo' src='images/sm-yelp.png'></div></a>
+            <div id='4' class='app'><img class='app-logo' src='images/sm-apps/sm-jetblue.png'></div>
+            <div id='5' class='app'><img class='app-logo' src='images/sm-apps/sm-youtube.png'></div>
+            <div id='6' class='app' style='background-color: purple'>Inve<br>stig<br>ate!</div>
           </div>
           <div class='row'>
-            <div id='7' class='app' ><img class='app-logo' src='images/sm-wiki.png' style='background-color: white'></div>
-            <div id='8' class='app'><img class='app-logo' src='images/sm-maps.png'></div>
-            <div id='9' class='app'><img class='app-logo' src='images/sm-translate.png'></div>
+            <div id='7' class='app' ><img class='app-logo' src='images/sm-apps/sm-wiki.png' style='background-color: white'></div>
+            <div id='8' class='app'><img class='app-logo' src='images/sm-apps/sm-maps.png'></div>
+            <div id='9' class='app'><img class='app-logo' src='images/sm-apps/sm-translate.png'></div>
           </div>
           <div class='row'>
-            <div id='10' class='app'><img class='app-logo' src='images/sm-itunes.png'></div>
+            <div id='10' class='app'><img class='app-logo' src='images/sm-apps/sm-itunes.png'></div>
           </div>
         </div>
         <!--Phone-->
         <div id='phone' class='app-display'>
           <h4>Contacts</h4>
-          <p>Boss</p>
+          <p>Call the Office</p>
           <p>Help Desk</p>
-          <p>Interpol</p>
+          <p>Get a Warrant</p>
           <p></p>
           <p></p>
         </div>
@@ -112,7 +112,7 @@
         <div id='notepad' class='app-display'>
           <h4 id='n-title'>Case Notes</h4>
           <hr>
-          <p id='n1' class="n-line">The suspect has green hair</p><hr>
+          <p id='n1' class="n-line"></p><hr>
           <p id='n2' class="n-line"></p><hr>
           <p id='n3' class="n-line"></p><hr>
           <p id='n4' class="n-line"></p><hr>
@@ -141,7 +141,13 @@
         <div id='youtube' class='app-display'>
           <iframe width='100%' height='425px' src="https://www.youtube.com/embed/MDStH49W5Hk" frameborder="0" allowfullscreen></iframe>
         </div>
-        <!--Yelp App ... need to think about this one-->
+        <!--Investigate-->
+        <div id='investigate' class='app-display'>
+          <h4>Things to Investigate:</h4>
+          <p id='crime-scene' class='inv'></p>
+          <p id='witness' class='inv'></p>
+          <p id='local-police' class='inv'></p>
+        </div>
         <!--Wikipedia-->
         <div id='wikipedia' class='app-display'>
           <h4>Wikipedia Articles</h4>
