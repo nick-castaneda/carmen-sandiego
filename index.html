@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-  <title>Carmen SanDiego</title>
+  <title>Carmen Sandiego</title>
   <link rel="stylesheet" type="text/css" href="style.css">
   <meta charset="UTF-8">
   <link href='https://fonts.googleapis.com/css?family=Droid+Sans+Mono' rel='stylesheet' type='text/css'>
@@ -32,8 +32,8 @@
         <div id='home'>
           <div class='row' id='row1'>
             <div id='1' class='app'><img class='app-logo' src='images/sm-apps/sm-phone.png'></div>
-            <div id='2' class='app' style='background-color: teal'>Criminal Database</div>
-            <div id='3' class='app'><img class='app-logo' src='images/sm-apps/sm-notepad.png'></div>
+            <div id='two' class='app' style='background-color: teal'><p id='cdappp'>Criminal Database</p></div>
+            <div id='3' class='app'><img class='app-logo' src='images/sm-apps/sm-notepad.jpeg'></div>
           </div>
           <div class='row'>
             <div id='4' class='app'><img class='app-logo' src='images/sm-apps/sm-jetblue.png'></div>
@@ -42,7 +42,7 @@
           </div>
           <div class='row'>
             <div id='7' class='app' ><img class='app-logo' src='images/sm-apps/sm-wiki.png' style='background-color: white'></div>
-            <div id='8' class='app'><img class='app-logo' src='images/sm-apps/sm-maps.png'></div>
+            <div id='eight' class='app'><img class='app-logo' src='images/sm-apps/sm-maps.png'></div>
             <div id='9' class='app'><img class='app-logo' src='images/sm-apps/sm-translate.png'></div>
           </div>
           <div class='row'>
@@ -107,6 +107,7 @@
         <div id='crim-database-results' class='app-display'>
           <h4>Possible Suspects:</h4>
           <p id='possible-suspects'></p>
+          <button id='back' type="submit">Back</button>
         </div>
         <!--Notepad is the div that holds the notepad app-->
         <div id='notepad' class='app-display'>
@@ -129,12 +130,13 @@
         <div id='travel' class='app-display'>
           <h4>Destinations: </h4>
           <ul>
-            <li id='los-angeles'>Los Angeles</li>
-            <li id='guadalajara'>Guadalajara</li>
-            <li id='nairobi'>Narobi</li>
             <li id='barcelona'>Barcelona</li>
+            <li id='guadalajara'>Guadalajara</li>
             <li id='istanbul'>Istanbul</li>
             <li id='jakarta'>Jakarta</li>
+            <li id='los-angeles'>Los Angeles</li>
+            <li id='nairobi'>Narobi</li>
+            <li id='santiago'>Santiago</li>
           </ul>
         </div>
         <!--Youtube-->
@@ -144,7 +146,7 @@
         <!--Investigate-->
         <div id='investigate' class='app-display'>
           <h4>Things to Investigate:</h4>
-          <p id='crime-scene' class='inv'></p>
+          <p id='crime-scene' class='inv'>Things are quiet here; nothing to investigate.</p>
           <p id='witness' class='inv'></p>
           <p id='local-police' class='inv'></p>
         </div>

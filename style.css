@@ -118,6 +118,7 @@ a{
   margin: 0;
   border-radius: 15px;
 }
+
 /* General app screen */
 .app-display{
   height: 100%;
@@ -138,6 +139,15 @@ h4{
 }
 
 /* Second App */
+#two{
+background-color: teal;
+border: 1px solid black;
+height: 78px;
+width: 78px;
+}
+#cdappp{
+  margin: 15px 8px;
+}
 #crim-database{
   background-color: #202020;
 }
@@ -159,7 +169,7 @@ h4{
   height: 40px;
   width: 100%;
 }
-#cdsubmit{
+button{
   margin: 15px 125px 0 125px;
   width: 125px;
 }
@@ -219,6 +229,7 @@ h4{
 /* Fifth App */
 #youtube{
   height: 400px;
+  width: 100%
 }
 
 /* Sixth App */
@@ -234,6 +245,9 @@ h4{
 
 /* Eighth App */
 #map{}
+#eight{
+  padding:0;
+}
 
 /* Ninth App */
 #translate{
@@ -255,7 +269,7 @@ h4{
   border: 15px solid #B81D18;
 }
 #city-div{
-  width: 200px;
+  width: 300px;
   height: 40px;
   position: absolute;
   background-color: #121f2f;
