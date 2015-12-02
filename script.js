@@ -8,8 +8,9 @@
 var hoursLeft = 110;
 var name = 'Nick';
 var round = 1;
-var warrant = false;
-var rank = 'Gumshoe'
+var warranted = '';
+var rank = 'Gumshoe';
+var gameOver = false;
 
 // Sets up the stats box of the game
 document.getElementById('player').innerHTML = name;
@@ -19,28 +20,40 @@ $('#time-remaining').html(hoursLeft);
 // Win/Loss check changes the time and checks to see if the player has
 // lost or won
 function winLossCheck(){
-  if(round === 6 && hoursLeft >= 0){
-    $('#time-remaining').html(100);
-    $('#location').html(office.stats_box);
-    $('#city').html(office.picture_tile);
-    document.getElementById('location-pic').src = office.picture;
-    $('#info-title').html(office.info_title);
-    $('#info-text').html('Good job, Dt. ' + name + '.  You caught ' + suspect16.name + '!');
-    $('#crime-scene').html('');
-    $('#witness').html('');
-    $('#local-police').html('');
-    rank = 'Private Eye';
-    $('rank').html(rank);
+  if(round === 6 && hoursLeft >= 0 && warranted === 'Suspect16'){
+    setTimeout(function(){
+      $('#time-remaining').html(100);
+      $('#location').html(office.stats_box);
+      $('#city').html(office.picture_tile);
+      document.getElementById('location-pic').src = office.picture;
+      $('#info-title').html(office.info_title);
+      $('#info-text').html('Good job, Dt. ' + name + '.  You caught ' + suspect16.name + '!');
+      $('#crime-scene').html('');
+      $('#witness').html('');
+      $('#local-police').html('');
+      rank = 'Private Eye';
+      $('rank').html(rank);
+    }, 3000)
+  }else if(round === 6 && hoursLeft >= 0 && warranted !== 'Suspect16'){
+      $('#time-remaining').html(0);
+      $('#location').html(office.stats_box);
+      $('#city').html(office.picture_tile);
+      document.getElementById('location-pic').src = office.picture;
+      $('#info-title').html(office.info_title);
+      $('#info-text').html("Next time I'm sending Dt. Castaneda ... You can't arrest a NCS goon withouth an arrest someone without a warrant!");
+      $('#crime-scene').html('');
+      $('#witness').html('');
+      $('#local-police').html('');
   }else if(hoursLeft < 2){
-    $('#time-remaining').html(0);
-    $('#location').html(office.stats_box);
-    $('#city').html(office.picture_tile);
-    document.getElementById('location-pic').src = office.picture;
-    $('#info-title').html(office.info_title);
-    $('#info-text').html("Next time I'm sending Dt. Nick ... You performed terribly");
-    $('#crime-scene').html('');
-    $('#witness').html('');
-    $('#local-police').html('');
+      $('#time-remaining').html(0);
+      $('#location').html(office.stats_box);
+      $('#city').html(office.picture_tile);
+      document.getElementById('location-pic').src = office.picture;
+      $('#info-title').html(office.info_title);
+      $('#info-text').html("Next time I'm sending Dt. Castaneda ... You're way too slow!");
+      $('#crime-scene').html('');
+      $('#witness').html('');
+      $('#local-police').html('');
   }else{
     $('#time-remaining').html(hoursLeft)
   }
@@ -50,17 +63,6 @@ function winLossCheck(){
 function newGame(){
   guiltySuspect = allSuspects[Math.floor(Math.random()*20)];
   office.changeAll();
-}
-
-// Sets up GoogleMaps (not my code)
-function initialize() {
-var mapCanvas = document.getElementById('map');
-var mapOptions = {
-  center: new google.maps.LatLng(34, -118.24),
-  zoom: 8,
-  mapTypeId: google.maps.MapTypeId.ROADMAP
-}
-var map = new google.maps.Map(mapCanvas, mapOptions)
 }
 
 
@@ -110,12 +112,6 @@ var suspect20 = new Suspect('suspect20','male','white','brownn','puppy','hummer'
 var allSuspects = [suspect1,suspect2,suspect3,suspect4,suspect5,suspect6,suspect7,suspect8,suspect9,suspect10,suspect11,suspect12,suspect13,suspect14,suspect15,suspect16,suspect17,suspect18,suspect19,suspect20];
 var guiltySuspect = '';
 
-// When an attribute is clicked, the strikethru class is toggled.
-$('.attribute').click(function(){
-  $(this).toggleClass('strikethru');
-  $(this).toggleClass('attribute');
-})
-
 // Check if suspect fits parameters
 function attributeCheck(){
   var availableAttributes = []
@@ -147,18 +143,6 @@ function filterSuspects(){
   }
   return possibleSuspectsString.substring(0, possibleSuspectsString.length - 2);
 }
-
-// When the 'Search Database' button is clicked, the function runs
-// filterSuspects and prints possibleSuspects to the search database app
-$('#cdsubmit').click(function(){
-  $('#crim-database-results').css('display', 'block');
-  $('#crim-database').css('display', 'none');
-  $('#possible-suspects').html(filterSuspects());
-})
-$('#back').click(function(){
-  $('#crim-database-results').css('display', 'none');
-  $('#crim-database').css('display', 'block');
-})
 
 
 
@@ -206,7 +190,9 @@ function City(stats_box, picture_tile, picture, info_title, info_text, inv1, inv
     $('#info-title').html(this.investigate1Title);
     if(this.requiredRound <= round){
       $('#info-text').html(this.investigate1Text);
-      findEmpty().html(this.investigateNotes1);
+      if(this.stats_box === "Nairobi" || this.stats_box === "Istanbul" || this.stats_box === "Jakarta" || this.stats_box === "Santiago"){
+        findEmpty().html(this.investigateNotes1);
+      }
     }else{
       $('#info-text').html("This place is pretty cool, but no evidence of NCS tomfoolery.");
     }
@@ -217,7 +203,9 @@ function City(stats_box, picture_tile, picture, info_title, info_text, inv1, inv
     $('#info-title').html(this.investigate2Title);
     if(this.requiredRound <= round){
       $('#info-text').html(this.investigate2Text);
-      findEmpty().html(this.investigateNotes2);
+      if(this.stats_box === "Nairobi" || this.stats_box === "Istanbul" || this.stats_box === "Jakarta" || this.stats_box === "Santiago"){
+        findEmpty().html(this.investigateNotes2);
+      }
     }else{
       $('#info-text').html("Isn't " + this.stats_box + ' a sweet city?');
     }
@@ -229,7 +217,9 @@ function City(stats_box, picture_tile, picture, info_title, info_text, inv1, inv
     $('#info-title').html(this.investigate3Title);
     if(this.requiredRound <= round){
       $('#info-text').html(this.investigate3Text);
-      findEmpty().html(this.investigateNotes3);
+      if(this.stats_box === "Nairobi" || this.stats_box === "Istanbul" || this.stats_box === "Jakarta" || this.stats_box === "Santiago"){
+        findEmpty().html(this.investigateNotes3);
+      }
     }else{
       $('#info-text').html("Are you investigating the National Crime Syndicate? I'm so relieved that they haven't hit " + this.stats_box + ' yet!');
     }
@@ -282,7 +272,7 @@ $('#crime-scene').click(function(){
       santiago.crimeScene();break;
     case 'Los Angeles':
       if(round === 5){round ++;}
-      losangeles.crimeScene();break;
+      losangeles.crimeScene(); break;
   }
 })
 $('#witness').click(function(){
@@ -341,9 +331,12 @@ function findEmpty(){
 // Phone button functions
 $('#phone-title').click(function(){
   $('#home').css('display', 'block');
-  $('.app-display').css('display', 'none');
+  $('.app-display').css('display','none');
+  $('#no-call').css('display','block');
+  $('#phone-call').css('display','none');
+  $('.call-screen').css('display','none');
 })
-$('#1').click(function(){
+$('#one').click(function(){
   $('#home').css('display', 'none');
   $('#phone').css('display', 'block');
   console.log('hi')
@@ -375,7 +368,6 @@ $('#7').click(function(){
 $('#eight').click(function(){
   $('#home').css('display', 'none');
   $('#map').css('display', 'block');
-  initialize();
 })
 $('#9').click(function(){
   $('#home').css('display', 'none');
@@ -386,7 +378,40 @@ $('#10').click(function(){
   $('#music').css('display', 'block');
 })
 
+// When the 'Search Database' button is clicked, the function runs
+// filterSuspects and prints possibleSuspects to the search database app
+$('#cdsubmit').click(function(){
+  $('#crim-database-results').css('display', 'block');
+  $('#crim-database').css('display', 'none');
+  $('#possible-suspects').html(filterSuspects());
+})
+$('#back').click(function(){
+  $('#crim-database-results').css('display', 'none');
+  $('#crim-database').css('display', 'block');
+})
 
+// When an attribute is clicked, the strikethru class is toggled.
+$('.attribute').click(function(){
+  $(this).toggleClass('strikethru');
+  $(this).toggleClass('attribute');
+})
+
+// Phone call functions
+$('#call-warrant').click(function(){
+  $('#no-call').css('display','none');
+  $('#phone-call').css('display','block');
+  $('#calling').css('display','block');
+  setTimeout(function(){
+    $('#calling').css('display','none');
+    $('#warrant-screen').css('display','block');
+  }, 2500);
+})
+$('#warrant-button').click(function(){
+  warranted = document.getElementById("warrant-select").value;
+  $('#warrant-screen').css('display','none');
+  $('#warrant-response').css('display','block');
+  $('#warrant-response').html('We have issued you warrant for ' + warranted + '. Any previously issued warrants have been cancelled.');
+})
 
 // At the start run these
 newGame();

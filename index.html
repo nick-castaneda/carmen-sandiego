@@ -31,7 +31,7 @@
         <!--Home is the main div that holds all the app icons-->
         <div id='home'>
           <div class='row' id='row1'>
-            <div id='1' class='app'><img class='app-logo' src='images/sm-apps/sm-phone.png'></div>
+            <div id='one' class='app'><img class='app-logo' src='images/sm-apps/sm-phone.png'></div>
             <div id='two' class='app' style='background-color: teal'><p id='cdappp'>Criminal Database</p></div>
             <div id='3' class='app'><img class='app-logo' src='images/sm-apps/sm-notepad.jpeg'></div>
           </div>
@@ -42,8 +42,8 @@
           </div>
           <div class='row'>
             <div id='7' class='app' ><img class='app-logo' src='images/sm-apps/sm-wiki.png' style='background-color: white'></div>
-            <div id='eight' class='app'><img class='app-logo' src='images/sm-apps/sm-maps.png'></div>
-            <div id='9' class='app'><img class='app-logo' src='images/sm-apps/sm-translate.png'></div>
+            <div id='eight' class='app'><img id='eight-logo' class='app-logo' src='images/sm-apps/sm-maps.png'></div>
+            <div id='9' class='app'><img class='app-logo' src='images/sm-apps/sm-translate.jpg'></div>
           </div>
           <div class='row'>
             <div id='10' class='app'><img class='app-logo' src='images/sm-apps/sm-itunes.png'></div>
@@ -52,11 +52,10 @@
         <!--Phone-->
         <div id='phone' class='app-display'>
           <h4>Contacts</h4>
-          <p>Call the Office</p>
-          <p>Help Desk</p>
-          <p>Get a Warrant</p>
-          <p></p>
-          <p></p>
+          <p id='call-office'>The Office</p>
+          <p id='call-help'>Help Desk</p>
+          <p id='call-warrant'>Warrant</p>
+          <p id='call-ncs'>Notorious Crime Syndicate</p>
         </div>
         <!--Criminal Database-->
         <div id='crim-database' class='app-display'>
@@ -130,13 +129,16 @@
         <div id='travel' class='app-display'>
           <h4>Destinations: </h4>
           <ul>
+            <li id='accra'>Accra</li>
             <li id='barcelona'>Barcelona</li>
             <li id='guadalajara'>Guadalajara</li>
+            <li id='Helsinki'>Helsinki</li>
             <li id='istanbul'>Istanbul</li>
             <li id='jakarta'>Jakarta</li>
             <li id='los-angeles'>Los Angeles</li>
-            <li id='nairobi'>Narobi</li>
+            <li id='nairobi'>Nairobi</li>
             <li id='santiago'>Santiago</li>
+            <li id='seoul'>Seoul</li>
           </ul>
         </div>
         <!--Youtube-->
@@ -161,10 +163,10 @@
           <a href='https://en.wikipedia.org/wiki/Martin_de_Porres' target="_blank"><p>Martin de Porres</p></a>
         </div>
         <!--Map is the div that holds google maps-->
-        <div id='map' class='app-display'></div>
+        <div id='map' class='app-display'><iframe id='custmap' src="http://www.google.com/maps/d/embed?mid=z7ubLVpryhZs.kBJlLyx0GXFY&z=2&center=23,-36"></iframe></div>
         <!--Google Translate-->
         <div id='translate' class='app-display'>
-          <a href='https://translate.google.com/' target="_blank"><h4>Google Translate</h4></a>
+          <iframe id='bt' src='http://www.bing.com/translator/'></iframe>
         </div>
         <!--Music-->
         <div id='music' class='app-display'>
@@ -183,8 +185,43 @@
   <div id='screen-right'>
     <!--Divs for the image window-->
     <div id='picture'>
-      <div id='city-div'><p id='city'></p></div>
-      <div id='image-div'><img id='location-pic' src=''></div>
+      <div id='no-call'>
+        <div id='city-div'><p id='city'></p></div>
+        <div id='image-div'><img id='location-pic' src=''></div>
+      </div>
+      <!--Div for phone call over image window-->
+      <div id='phone-call'>
+        <div id='calling'>calling ...</div>
+        <div id='warrant-screen' class='call-screen'>
+          <p id='warrant-p'>Have you figured out the identity of the criminal yet?  If so, input her/his name and we'll issue a warrant</p>
+          <div id='warrant-inputs'>
+            <select id='warrant-select'>
+              <option value="Suspect1">Suspect1</option>
+              <option value="Suspect1">Suspect2</option>
+              <option value="Suspect3">Suspect3</option>
+              <option value="Suspect4">Suspect4</option>
+              <option value="Suspect5">Suspect5</option>
+              <option value="Suspect6">Suspect6</option>
+              <option value="Suspect7">Suspect7</option>
+              <option value="Suspect8">Suspect8</option>
+              <option value="Suspect9">Suspect9</option>
+              <option value="Suspect10">Suspect10</option>
+              <option value="Suspect11">Suspect11</option>
+              <option value="Suspect12">Suspect12</option>
+              <option value="Suspect13">Suspect13</option>
+              <option value="Suspect14">Suspect14</option>
+              <option value="Suspect15">Suspect15</option>
+              <option value="Suspect16">Suspect16</option>
+              <option value="Suspect17">Suspect17</option>
+              <option value="Suspect18">Suspect18</option>
+              <option value="Suspect19">Suspect19</option>
+              <option value="Suspect20">Suspect20</option>
+            </select>
+            <button id='warrant-button'>Submit</button>
+          </div>
+        </div>
+        <div id='warrant-response' class='call-screen'></div>
+      </div>
     </div>
     <!--Divs for the text window-->
     <div id='text'>

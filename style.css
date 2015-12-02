@@ -140,10 +140,9 @@ h4{
 
 /* Second App */
 #two{
-background-color: teal;
-border: 1px solid black;
-height: 78px;
-width: 78px;
+
+background: radial-gradient(rgba(6,108,207,1), rgba(2,132,130,1));
+
 }
 #cdappp{
   margin: 15px 8px;
@@ -246,12 +245,29 @@ button{
 /* Eighth App */
 #map{}
 #eight{
-  padding:0;
+  background-color: #121f2f;
+}
+#eight-logo{
+  width: 90px;
+  height: 90px;
+  margin: -5px;
+}
+#custmap{
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  border: none;
 }
 
 /* Ninth App */
 #translate{
-  background-color: hotpink;
+  background-color: #202020;
+}
+#bt{
+  height: 100%;
+  width: 100%;
+  border: 0;
+/*  background-color: white; */
 }
 
 /* Tenth App */
@@ -267,6 +283,11 @@ button{
   margin: 1%;
   height: 450px;
   border: 15px solid #B81D18;
+}
+#no-call{
+  width: 100%;
+  height: 100%;
+  display: block;
 }
 #city-div{
   width: 300px;
@@ -288,6 +309,7 @@ button{
   width: 100%;
   height: 100%;
 }
+
 #text{
   background-color: #121f2f;
   width: 97%;
@@ -306,3 +328,38 @@ p{
   margin: 10px;
   line-height: 25px
 }
+
+/**************************** Phone Calls ****************************/
+#phone-call{
+  width: 100%;
+  height: 100%;
+  display: none;
+  background-color: #202020;
+}
+#calling{
+  font-size: 40px;
+  text-align: center;
+  padding: 200px 0 200px 0;
+  display: none;
+}
+.call-screen{
+  font-size: 20px;
+  text-align: center;
+  padding: 150px 0 150px 0;
+  display: none;
+}
+.call-screen{
+  display: none;
+  text-align: center;
+}
+#warrant-inputs{
+  margin-left: 125px;
+}
+
+
+
+
+
+
+
+
