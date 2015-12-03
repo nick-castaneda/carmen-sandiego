@@ -13,7 +13,7 @@ img{
 #screen{
   background-color: #202020;
   width: 100%;
-  height: 750px;
+  height: 785px;
   border: 8px solid #B81D18;
   margin: -8px;
 }
@@ -68,30 +68,42 @@ li{
 }
 #smartphone{
   width: 98%;
-  height: 500px;
-  background-color: #004678;
-  margin: 1%;
+  height: 525px;
+  background-color: silver;
+  margin: 20px 1% 0 1%;
   border: 5px solid #121f2f;
   border-radius: 30px;
 }
 #phone-title{
   text-align: center;
-  width: 90%;
-  height: 50px;
-  margin: 10px auto;
-  margin-bottom: 0;
-  font-size: 30px;
+  width: 60px;
+  height: 60px;
+  margin: 0 auto;
+  border-radius: 60px;
+  border: 2px solid black;
+}
+#square{
+  border: 1px solid black;
+  width: 30px;
+  height: 30px;
+  margin: 14px;
+  border-radius: 5px;
 }
 
 /************************** iPhone Screens **************************/
 /* Home of the Apps */
 #home{
   display: block;
+  height: 100%;
+  width: 100%;
+  margin: -1px;
+  border-radius: 5px;
 }
 #phone-screen{
   height: 425px;
   width: 90%;
-  margin: 0 auto;
+  margin: 20px auto;
+  margin-bottom: 10px;
   background-color: #121f2f;
   border-radius: 5px;
 }
@@ -100,7 +112,6 @@ li{
   margin: 2px;
 }
 .app{
-  background-color: #004678;
   height: 80px;
   width: 80px;
   border-radius: 15px;
@@ -122,8 +133,8 @@ a{
 /* General app screen */
 .app-display{
   height: 100%;
-  width: 100%;
-  margin: 0;
+  width: 99%;
+  margin: -1px;
   display: none;
   border-radius: 5px;
   border: 2px solid black;
@@ -135,14 +146,27 @@ h4{
 
 /* First App */
 #phone{
-  background-color: #202020;
+  background-color: #E6E6E6;
+  color: black;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  font-size: 20px;
+}
+#phone h4{
+  text-decoration: none;
+  font-size: 30px;
+  margin: 20px;
+}
+#phone p{
+  margin: 20px;
+}
+#thick{
+  height: 10px
+  color: black;
 }
 
 /* Second App */
 #two{
-
-background: radial-gradient(rgba(6,108,207,1), rgba(2,132,130,1));
-
+  background: radial-gradient(rgba(6,108,207,1), rgba(2,132,130,.75));
 }
 #cdappp{
   margin: 15px 8px;
@@ -222,7 +246,26 @@ button{
 
 /* Fourth App */
 #travel{
-  background-color: #202020;
+  background-color: #061F5C;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+#travel h4{
+  background-color: #061F5C;
+  height: 40px;
+  margin: 0px;
+  padding: 15px 0 0 0 ;
+  font-size: 30px;
+  text-decoration: none;
+}
+#travel li{
+  border-top: 1px solid white;
+  margin: 0 0 0 -40px;
+  padding: 5px 0 0 40px;
+  font-size: 20px;
+  height: 30px;
+}
+.light{
+  background-color: #318DDE;
 }
 
 /* Fifth App */
@@ -230,10 +273,21 @@ button{
   height: 400px;
   width: 100%
 }
+#ytlogo{
+    width: 90px;
+    height: 90px;
+    margin: -5px;
+}
 
 /* Sixth App */
 #investigate{
   background-color: #202020;
+}
+#six{
+  font-size: 20px;
+  background-color: purple;
+  background: radial-gradient(rgba(102,51,153,1), rgba(51,51,153,.75));
+
 }
 
 /* Seventh App */
@@ -345,12 +399,8 @@ p{
 .call-screen{
   font-size: 20px;
   text-align: center;
-  padding: 150px 0 150px 0;
+  padding: 150px 10px 150px 10px;
   display: none;
-}
-.call-screen{
-  display: none;
-  text-align: center;
 }
 #warrant-inputs{
   margin-left: 125px;

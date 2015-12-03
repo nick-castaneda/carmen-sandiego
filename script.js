@@ -212,7 +212,6 @@ function City(stats_box, picture_tile, picture, info_title, info_text, inv1, inv
     hoursLeft -= 2;
     winLossCheck();
   }
-
   this.localPolice = function(){
     $('#info-title').html(this.investigate3Title);
     if(this.requiredRound <= round){
@@ -227,6 +226,7 @@ function City(stats_box, picture_tile, picture, info_title, info_text, inv1, inv
     winLossCheck();
   }
 }
+
 var office = new City('The Office', 'The Office', 'images/non-cities/detectives-office.jpg', 'The Office', 'Welcome Dt. ' + name + ' to Nick Castañeda’s javascript reproduction of Carmen Sandiego.  My name is Dt.  Catchemall  and I need your help.  The dastardly criminals of the Notorious Crime Syndicate have been stealing precious artifacts in cities all over the world.  I need you to scour the globe looking for evidence that will help you identify the members of the NCS.  You’ll need to use your smartphone and brain to find clues, so make sure both are in working order.  Your first mission is to find the criminal that stole Mt. Rushmore.  The suspect was last seen in the largest city of Kenya.  Call me if you need help.');
 var losangeles = new City('Los Angeles', 'Los Angeles, US', 'images/losangeles.jpg', 'Los Angeles, United States', 'Los Angeles is a great fucking city.','Check out Griffith Observatory','Griffith Observatory','OMG!!!! You caught Suspect 16 trying to steal the telescope from Griffith Observatory!  Good fucking job.','','Talk to a local','Nick Castañeda: ','Did you know that flammable and inflammable mean the same thing?','','Visit the local police office','Police Officer:','I just got a call from the Griffith Observatory. Something shady is going on there.','','images/losangeles-griffith.jpg','Griffith Observatory',5);
 //var guadalajara = new City('Guadalajara', 'Guadalajara, MX', 'images/guadalajara.jpg', 'Guadalajara, Mexico', 'guadalajara Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.');
@@ -236,28 +236,58 @@ var jakarta = new City('Jakarta', 'Jakarta, ID', 'images/jakarta.jpg', 'Jakarta,
 var istanbul = new City('Istanbul', 'Istanbul, TR', 'images/istanbul.jpg', 'Istanbul, Turkey', 'Due to its strategic position on a straight separating the Mediterranean and Black Seas, Istanbul has been a important city throughout history.  It began as a greek city-state named Byzantium, and for over a thousand years it was the capital of the Byzantine Empire under the name Constantinople.  In 1454 it was conquered by the Turks and became Istanbul, the capital of the Ottoman Empire.  Istanbul is one of the major cultural and artistic centers of Europe.  It is home to the Haggia Sophia, the Pera Museum, and the Grand Bazaar, the oldest covered market in the world.','Investigate the Grand Bazaar', 'Grand Bazaar','You journey through the labyrinth of stores searching for any clues.  One of the shopkeepers gave you a piece of paper with the following written on it: “Ben çarşı soygunu hakkında bazı bilgiler var: Şüpheli şapka giyiyor değildi.”','Şüpheli şapka giyiyor değildi.','Speak with student from the University of Istanbul.','University Student:','I was doing some weekend shopping when I saw the criminal robbing the bazaar, I looked the suspect in the eyes and said “what you’re doing is wrong!” The suspect ran away, but I’ll never forget those brown eyes.','Suspect’s eyes are brown.','Talk to the local authorities','Istanbul Cop:','The N.C.S. has struck again; the suspect stole the wares of over a hundred local businesses!  We picked up some chatter that the suspect was traveling to the second most populous metropolitan area in the world.','The third city is part of the 2nd largest metro area','images/istanbul-bazaar.jpg','The Grand Bazaar',2);
 var santiago = new City('Santiago','Santiago, CL','images/santiago.jpg', 'Santiago, Chile', 'Santiago is a great city,  has the gran torre and the catedral','Inspect Catedral de Santiago de Compostela','Catedral de Santiago de Compostela','Spray painted Notorious Crime Syndicate on walls.  Found an earring on the ground.','Found earring at crime scene.','Speak with businesswoman','Businesswoman:','The suspect dropped an earring when fleeing','Final city ancestral home of the Chumash People','Visit the local police office','Police Cadet:','El jefe me dijo que tengamos prueba que el criminal no es una mujer.','El criminal no es una mujer.','images/santiago-cat.jpg','Catedral de Santiago de Compostela',4);
 
+// Flight function
+function flight(){
+  $('#location').html('First Class');
+  $('#city').html('Stratosphere');
+  document.getElementById('location-pic').src = 'images/non-cities/flight.png';
+  $('#info-title').html('In Flight');
+  $('#info-text').html('“The Guide says there is an art to flying", said Ford, "or rather a knack. The knack lies in learning how to throw yourself at the ground and miss.”');
+}
+
 // Travel functions
 $('#los-angeles').click(function(){
-  losangeles.changeAll();
+  flight();
+  setTimeout(function(){
+    losangeles.changeAll();
+  }, 2000);
 });
 $('#guadalajara').click(function(){
-  guadalajara.changeAll();
+  flight();
+  setTimeout(function(){
+    guadalajara.changeAll();
+  }, 3000);
 });
 $('#nairobi').click(function(){
-  nairobi.changeAll();
+  flight();
+  setTimeout(function(){
+    nairobi.changeAll();
+  }, 3000);
 });
 $('#barcelona').click(function(){
-  barcelona.changeAll();
+  flight();
+  setTimeout(function(){
+    barcelona.changeAll();
+  }, 3000);
 });
 $('#jakarta').click(function(){
-  jakarta.changeAll();
+  flight();
+  setTimeout(function(){
+    jakarta.changeAll();
+  }, 3000);
 });
 $('#istanbul').click(function(){
-  istanbul.changeAll();
+  flight();
+  setTimeout(function(){
+    istanbul.changeAll();
+  }, 3000);
 });
 $('#santiago').click(function(){
-  santiago.changeAll();
-})
+  flight();
+  setTimeout(function(){
+    santiago.changeAll();
+  }, 3000);
+});
 
 // Click functions for investigating
 $('#crime-scene').click(function(){
@@ -353,11 +383,11 @@ $('#4').click(function(){
   $('#home').css('display', 'none');
   $('#travel').css('display', 'block');
 })
-$('#5').click(function(){
+$('#five').click(function(){
   $('#home').css('display', 'none');
   $('#youtube').css('display', 'block');
 })
-$('#6').click(function(){
+$('#six').click(function(){
   $('#home').css('display', 'none');
   $('#investigate').css('display', 'block');
 })
@@ -397,8 +427,39 @@ $('.attribute').click(function(){
 })
 
 // Phone call functions
+$('#call-office').click(function(){
+  $('#no-call').css('display','none');
+  $('.call-screen').css('display','none');
+  $('#phone-call').css('display','block');
+  $('#calling').css('display','block');
+  setTimeout(function(){
+    $('#calling').css('display','none');
+    $('#office-call').css('display','block');
+  }, 2500);
+})
+$('#call-help').click(function(){
+  $('#no-call').css('display','none');
+  $('.call-screen').css('display','none');
+  $('#phone-call').css('display','block');
+  $('#calling').css('display','block');
+  setTimeout(function(){
+    $('#calling').css('display','none');
+    $('#help-call').css('display','block');
+  }, 2500);
+})
+$('#call-ncs').click(function(){
+  $('#no-call').css('display','none');
+  $('.call-screen').css('display','none');
+  $('#phone-call').css('display','block');
+  $('#calling').css('display','block');
+  setTimeout(function(){
+    $('#calling').css('display','none');
+    $('#ncs-call').css('display','block');
+  }, 2500);
+})
 $('#call-warrant').click(function(){
   $('#no-call').css('display','none');
+  $('.call-screen').css('display','none');
   $('#phone-call').css('display','block');
   $('#calling').css('display','block');
   setTimeout(function(){

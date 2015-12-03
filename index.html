@@ -26,19 +26,18 @@
     </div>
 
     <div id='smartphone'>
-      <div id='phone-title'>smartphone</div>
       <div id='phone-screen'>
         <!--Home is the main div that holds all the app icons-->
         <div id='home'>
           <div class='row' id='row1'>
             <div id='one' class='app'><img class='app-logo' src='images/sm-apps/sm-phone.png'></div>
-            <div id='two' class='app' style='background-color: teal'><p id='cdappp'>Criminal Database</p></div>
+            <div id='two' class='app'><p id='cdappp'>Criminal Database</p></div>
             <div id='3' class='app'><img class='app-logo' src='images/sm-apps/sm-notepad.jpeg'></div>
           </div>
           <div class='row'>
             <div id='4' class='app'><img class='app-logo' src='images/sm-apps/sm-jetblue.png'></div>
-            <div id='5' class='app'><img class='app-logo' src='images/sm-apps/sm-youtube.png'></div>
-            <div id='6' class='app' style='background-color: purple'>Inve<br>stig<br>ate!</div>
+            <div id='five' class='app'><img class='app-logo' id='ytlogo' src='images/sm-apps/sm-youtube.png'></div>
+            <div id='six' class='app'>Inve<br>stig<br>ate!</div>
           </div>
           <div class='row'>
             <div id='7' class='app' ><img class='app-logo' src='images/sm-apps/sm-wiki.png' style='background-color: white'></div>
@@ -51,11 +50,11 @@
         </div>
         <!--Phone-->
         <div id='phone' class='app-display'>
-          <h4>Contacts</h4>
-          <p id='call-office'>The Office</p>
-          <p id='call-help'>Help Desk</p>
-          <p id='call-warrant'>Warrant</p>
-          <p id='call-ncs'>Notorious Crime Syndicate</p>
+          <h4>Contacts</h4><hr id='thick'>
+          <p id='call-office'>The Chief</p><hr>
+          <p id='call-help'>Help Desk</p><hr>
+          <p id='call-warrant'>Warrant</p><hr>
+          <p id='call-ncs'>Notorious Crime Syndicate</p><hr>
         </div>
         <!--Criminal Database-->
         <div id='crim-database' class='app-display'>
@@ -127,17 +126,17 @@
         </div>
         <!--Travel is the div that allows the user to switch locations-->
         <div id='travel' class='app-display'>
-          <h4>Destinations: </h4>
+          <h4>jetBlue</h4>
           <ul>
-            <li id='accra'>Accra</li>
+            <li id='accra' class='light'>Accra</li>
             <li id='barcelona'>Barcelona</li>
-            <li id='guadalajara'>Guadalajara</li>
+            <li id='guadalajara' class='light'>Guadalajara</li>
             <li id='Helsinki'>Helsinki</li>
-            <li id='istanbul'>Istanbul</li>
+            <li id='istanbul' class='light'>Istanbul</li>
             <li id='jakarta'>Jakarta</li>
-            <li id='los-angeles'>Los Angeles</li>
+            <li id='los-angeles' class='light'>Los Angeles</li>
             <li id='nairobi'>Nairobi</li>
-            <li id='santiago'>Santiago</li>
+            <li id='santiago' class='light'>Santiago</li>
             <li id='seoul'>Seoul</li>
           </ul>
         </div>
@@ -179,6 +178,7 @@
           <a href='https://youtu.be/ZWmrfgj0MZI?list=PLnNwR1Nk7Gos0x5p0QiF1fIetavKlq8PT' target='_blank'><p>Trip Hop</p></a>
         </div>
       </div>
+      <div id='phone-title'><div id='square'></div></div>
     </div>
   </div>
 
@@ -192,6 +192,9 @@
       <!--Div for phone call over image window-->
       <div id='phone-call'>
         <div id='calling'>calling ...</div>
+        <div id='office-call' class='call-screen'>I hate repeating myself! Start in Kenya, investigate crime scenes, and talk to the local police.  See if you can find clues and track the suspect.</div>
+        <div id='help-call' class='call-screen'>I'll help you</div>
+        <div id='ncs-call' class='call-screen'>Nice try detective, but it'll take more than a phone call to catch one of us!</div>
         <div id='warrant-screen' class='call-screen'>
           <p id='warrant-p'>Have you figured out the identity of the criminal yet?  If so, input her/his name and we'll issue a warrant</p>
           <div id='warrant-inputs'>
