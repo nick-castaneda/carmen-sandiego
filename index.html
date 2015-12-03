@@ -30,31 +30,31 @@
         <!--Home is the main div that holds all the app icons-->
         <div id='home'>
           <div class='row' id='row1'>
-            <div id='one' class='app'><img class='app-logo' src='images/sm-apps/sm-phone.png'></div>
-            <div id='two' class='app'><p id='cdappp'>Criminal Database</p></div>
-            <div id='3' class='app'><img class='app-logo' src='images/sm-apps/sm-notepad.jpeg'></div>
+            <div id='one' class='app hover'><img class='app-logo' src='images/sm-apps/sm-phone.png'></div>
+            <div id='two' class='app hover'><p id='cdappp'>Criminal Database</p></div>
+            <div id='3' class='app hover'><img class='app-logo' src='images/sm-apps/sm-notepad.jpeg'></div>
           </div>
           <div class='row'>
-            <div id='4' class='app'><img class='app-logo' src='images/sm-apps/sm-jetblue.png'></div>
-            <div id='five' class='app'><img class='app-logo' id='ytlogo' src='images/sm-apps/sm-youtube.png'></div>
-            <div id='six' class='app'>Inve<br>stig<br>ate!</div>
+            <div id='4' class='app hover'><img class='app-logo' src='images/sm-apps/sm-jetblue.png'></div>
+            <div id='five' class='app hover'><img class='app-logo' id='ytlogo' src='images/sm-apps/sm-youtube.png'></div>
+            <div id='six' class='app hover'>Inve<br>stig<br>ate!</div>
           </div>
           <div class='row'>
-            <div id='7' class='app' ><img class='app-logo' src='images/sm-apps/sm-wiki.png' style='background-color: white'></div>
-            <div id='eight' class='app'><img id='eight-logo' class='app-logo' src='images/sm-apps/sm-maps.png'></div>
-            <div id='9' class='app'><img class='app-logo' src='images/sm-apps/sm-translate.jpg'></div>
+            <div id='7' class='app hover' ><img class='app-logo' src='images/sm-apps/sm-wiki.png' style='background-color: white'></div>
+            <div id='eight' class='app hover'><img id='eight-logo' class='app-logo' src='images/sm-apps/sm-maps.png'></div>
+            <div id='9' class='app hover'><img class='app-logo' src='images/sm-apps/sm-translate.jpg'></div>
           </div>
           <div class='row'>
-            <div id='10' class='app'><img class='app-logo' src='images/sm-apps/sm-itunes.png'></div>
+            <div id='10' class='app hover'><img class='app-logo' src='images/sm-apps/sm-itunes.png'></div>
           </div>
         </div>
         <!--Phone-->
         <div id='phone' class='app-display'>
           <h4>Contacts</h4><hr id='thick'>
-          <p id='call-office'>The Chief</p><hr>
-          <p id='call-help'>Help Desk</p><hr>
-          <p id='call-warrant'>Warrant</p><hr>
-          <p id='call-ncs'>Notorious Crime Syndicate</p><hr>
+          <p id='call-office' class='hover'>The Chief</p><hr>
+          <p id='call-help' class='hover'>Help Desk</p><hr>
+          <p id='call-warrant' class='hover'>Warrant</p><hr>
+          <p id='call-ncs' class='hover'>Notorious Crime Syndicate</p><hr>
         </div>
         <!--Criminal Database-->
         <div id='crim-database' class='app-display'>
@@ -90,7 +90,7 @@
               <p id='eye-grey' class='attribute'>Grey</p>
             </div>
             <div class='cds'>
-              <p class='category'>Hair Color:</p>
+              <p class='category'>Vehicle:</p>
               <p id='vehicle-prius' class='attribute'>Prius</p>
               <p id='vehicle-hoverboard' class='attribute'>Hoverboard</p>
               <p id='vehicle-motorcycle' class='attribute'>Motorcycle</p>
@@ -99,13 +99,13 @@
             </div>
           </div>
           <div id='cdrsubmit' class='cdr'>
-            <button id='cdsubmit' type="submit">Search Database</button>
+            <button id='cdsubmit' class='hover' type="submit">Search Database</button>
           </div>
         </div>
         <div id='crim-database-results' class='app-display'>
           <h4>Possible Suspects:</h4>
           <p id='possible-suspects'></p>
-          <button id='back' type="submit">Back</button>
+          <button id='back' class='hover' type="submit">Back</button>
         </div>
         <!--Notepad is the div that holds the notepad app-->
         <div id='notepad' class='app-display'>
@@ -128,16 +128,16 @@
         <div id='travel' class='app-display'>
           <h4>jetBlue</h4>
           <ul>
-            <li id='accra' class='light'>Accra</li>
-            <li id='barcelona'>Barcelona</li>
-            <li id='guadalajara' class='light'>Guadalajara</li>
-            <li id='Helsinki'>Helsinki</li>
-            <li id='istanbul' class='light'>Istanbul</li>
-            <li id='jakarta'>Jakarta</li>
-            <li id='los-angeles' class='light'>Los Angeles</li>
-            <li id='nairobi'>Nairobi</li>
-            <li id='santiago' class='light'>Santiago</li>
-            <li id='seoul'>Seoul</li>
+            <li id='accra' class='light hover'>Accra</li>
+            <li id='barcelona' class='hover'>Barcelona</li>
+            <li id='guadalajara' class='light hover'>Guadalajara</li>
+            <li id='helsinki' class='hover'>Helsinki</li>
+            <li id='istanbul' class='light hover'>Istanbul</li>
+            <li id='jakarta' class='hover'>Jakarta</li>
+            <li id='los-angeles' class='light hover'>Los Angeles</li>
+            <li id='nairobi' class='hover'>Nairobi</li>
+            <li id='santiago' class='light hover'>Santiago</li>
+            <li id='seoul' class='hover'>Seoul</li>
           </ul>
         </div>
         <!--Youtube-->
@@ -147,19 +147,33 @@
         <!--Investigate-->
         <div id='investigate' class='app-display'>
           <h4>Things to Investigate:</h4>
-          <p id='crime-scene' class='inv'>Things are quiet here; nothing to investigate.</p>
-          <p id='witness' class='inv'></p>
-          <p id='local-police' class='inv'></p>
+          <ol id='invest-list'>
+            <li id='crime-scene' class='hover'></li>
+            <li id='witness' class='hover'></li>
+            <li id='local-police' class='hover'></li>
+          </ol>
         </div>
         <!--Wikipedia-->
         <div id='wikipedia' class='app-display'>
-          <h4>Wikipedia Articles</h4>
-          <a href='https://en.wikipedia.org/wiki/Order_of_the_Occult_Hand' target="_blank"><p>Order of the Occult Hand</p></a>
-          <a href='https://en.wikipedia.org/wiki/Emperor_Norton#Declares_himself_.22Emperor.22' target="_blank"><p>Emperor Norton</p></a>
-          <a href='https://en.wikipedia.org/wiki/Paraprosdokian' target="_blank"><p>Paraprosdokian</p></a>
-          <a href='https://en.wikipedia.org/wiki/Jim_Thorpe' target="_blank"><p>Jim Thorpe</p></a>
-          <a href='https://en.wikipedia.org/wiki/Potential_cultural_impact_of_extraterrestrial_contact' target="_blank"><p>Potential Cultural Impact of Extraterrestrials</p></a>
-          <a href='https://en.wikipedia.org/wiki/Martin_de_Porres' target="_blank"><p>Martin de Porres</p></a>
+          <div id='wikichoices'>
+            <h4>Wikipedia Articles</h4>
+            <p id='chumash' class='art hover'>Chumash People</p>
+            <p id='emperor' class='art hover'>Emperor Norton</p>
+            <p id='jim' class='art hover'>Jim Thorpe</p>
+            <p id='urban' class='art hover'>Largest Urban Areas</p>
+            <p id='martin' class='art hover'>Martin de Porres</p>
+            <p id='order' class='art hover'>Order of the Occult Hand</p>
+            <p id='parapros' class='art hover'>Paraprosdokian</p>
+            <p id='potential' class='art hover'>Potential Cultural Impact of Extraterrestrials</p>
+          </div>
+          <iframe id='chumash-page' class='wikipage' width='100%' height='425px' src="https://en.m.wikipedia.org/wiki/Chumash_people" frameborder="0" allowfullscreen></iframe>
+          <iframe id='emperor-page' class='wikipage' width='100%' height='425px' src="https://en.m.wikipedia.org/wiki/Emperor_Norton" frameborder="0" allowfullscreen></iframe>
+          <iframe id='jim-page' class='wikipage' width='100%' height='425px' src="https://en.m.wikipedia.org/wiki/Jim_Thorpe" frameborder="0" allowfullscreen></iframe>
+          <iframe id='urban-page' class='wikipage' width='100%' height='425px' src="https://en.m.wikipedia.org/wiki/List_of_urban_areas_by_population" frameborder="0" allowfullscreen></iframe>
+          <iframe id='martin-page' class='wikipage' width='100%' height='425px' src="https://en.m.wikipedia.org/wiki/Martin_de_Porres" frameborder="0" allowfullscreen></iframe>
+          <iframe id='order-page' class='wikipage' width='100%' height='425px' src="https://en.m.wikipedia.org/wiki/Order_of_the_Occult_Hand" frameborder="0" allowfullscreen></iframe>
+          <iframe id='parapros-page' class='wikipage' width='100%' height='425px' src="https://en.m.wikipedia.org/wiki/Paraprosdokian" frameborder="0" allowfullscreen></iframe>
+          <iframe id='potential-page' class='wikipage' width='100%' height='425px' src="https://en.m.wikipedia.org/wiki/Potential_cultural_impact_of_extraterrestrial_contact" frameborder="0" allowfullscreen></iframe>
         </div>
         <!--Map is the div that holds google maps-->
         <div id='map' class='app-display'><iframe id='custmap' src="http://www.google.com/maps/d/embed?mid=z7ubLVpryhZs.kBJlLyx0GXFY&z=2&center=23,-36"></iframe></div>
@@ -170,15 +184,15 @@
         <!--Music-->
         <div id='music' class='app-display'>
           <h4>Playlists</h4>
-          <a href='https://youtu.be/drsQLEU0N1Y?list=PLnNwR1Nk7Got6lfqa1rjXO9DR6HiAHg1r' target='_blank'><p>Southern Hip Hop</p></a>
-          <a href='https://youtu.be/C2cMG33mWVY?list=PLnNwR1Nk7GovUc403i77fcgKMWCTZpMrn' target='_blank'><p>90s One-Hit-Wonders</p></a>
-          <a href='https://youtu.be/hugY9CwhfzE?list=PLnNwR1Nk7GotQovsj62OVmQdkePN3gPH-' target='_blank'><p>Protopunk</p></a>
-          <a href='https://youtu.be/oWBf9hfW_4Y?list=PLnNwR1Nk7GotuI1-zZd17-13gGa61BN1r' target='_blank'><p>Colobian Salsa</p></a>
-          <a href='https://youtu.be/hhF2a03i65Y?list=PLnNwR1Nk7Gos-kJ9QHKtwuzLrTtvqwB5a' target='_blank'><p>Lo-fi Indie Rock</p></a>
-          <a href='https://youtu.be/ZWmrfgj0MZI?list=PLnNwR1Nk7Gos0x5p0QiF1fIetavKlq8PT' target='_blank'><p>Trip Hop</p></a>
+          <a href='https://youtu.be/drsQLEU0N1Y?list=PLnNwR1Nk7Got6lfqa1rjXO9DR6HiAHg1r' target='_blank'><p class='hover'>Southern Hip Hop</p></a>
+          <a href='https://youtu.be/C2cMG33mWVY?list=PLnNwR1Nk7GovUc403i77fcgKMWCTZpMrn' target='_blank'><p class='hover'>90s One-Hit-Wonders</p></a>
+          <a href='https://youtu.be/hugY9CwhfzE?list=PLnNwR1Nk7GotQovsj62OVmQdkePN3gPH-' target='_blank'><p class='hover'>Protopunk</p></a>
+          <a href='https://youtu.be/oWBf9hfW_4Y?list=PLnNwR1Nk7GotuI1-zZd17-13gGa61BN1r' target='_blank'><p class='hover'>Colobian Salsa</p></a>
+          <a href='https://youtu.be/hhF2a03i65Y?list=PLnNwR1Nk7Gos-kJ9QHKtwuzLrTtvqwB5a' target='_blank'><p class='hover'>Lo-fi Indie Rock</p></a>
+          <a href='https://youtu.be/ZWmrfgj0MZI?list=PLnNwR1Nk7Gos0x5p0QiF1fIetavKlq8PT' target='_blank'><p class='hover'>Trip Hop</p></a>
         </div>
       </div>
-      <div id='phone-title'><div id='square'></div></div>
+      <div id='phone-title' class='hover'><div id='square'></div></div>
     </div>
   </div>
 
@@ -193,34 +207,46 @@
       <div id='phone-call'>
         <div id='calling'>calling ...</div>
         <div id='office-call' class='call-screen'>I hate repeating myself! Start in Kenya, investigate crime scenes, and talk to the local police.  See if you can find clues and track the suspect.</div>
-        <div id='help-call' class='call-screen'>I'll help you</div>
+        <div id='help-call' class='call-screen'>
+          <p>In a nutshell, your job is to discover the identity of NCS members and track them down within 100 hours.  The apps we’ve installed on your smartphone will be crucially important in this endeavor.</p>
+          <p>1. The Phone app will help you obtain warrants for your arrests.  Make you have a warrant before you stumble upon a criminal. Otherwise, we’ll have to release the goon.</p>
+          <p>2. The Criminal Database app contains the current information of all people suspected to belong to the NCS.  You can filter out innocent suspects as you accumulate clues.</p>
+          <p>3. The Notepad app will keep track of any clues you find.</p>
+          <p>4. Through the jetBlue app you can travel all over the world.  Each flight takes 10 hours.</p>
+          <p>5. If you’re bored, check out some videos on the youtube app.</p>
+          <p>6. The Investigate! app allows you to search crime scenes and talk to witnesses.  Each action takes 2 hours, so make sure you don’t waste time investigating the same place twice.</p>
+          <p>7. The Wikipedia app is great for research.  You might need help with a history question or two.</p>
+          <p>8. Everyone gets lost now and then.  The Google Maps app will help you will geography puzzles.</p>
+          <p>9. As you travel around the world, you’re bound to meet people that don't speak English.  Use the translate app to help you communicate.</p>
+          <p>10. Humanity is nothing without art.  Use the Music app to listen to tunes while you sleuth.</p>
+        </div>
         <div id='ncs-call' class='call-screen'>Nice try detective, but it'll take more than a phone call to catch one of us!</div>
         <div id='warrant-screen' class='call-screen'>
           <p id='warrant-p'>Have you figured out the identity of the criminal yet?  If so, input her/his name and we'll issue a warrant</p>
           <div id='warrant-inputs'>
             <select id='warrant-select'>
-              <option value="Suspect1">Suspect1</option>
-              <option value="Suspect1">Suspect2</option>
-              <option value="Suspect3">Suspect3</option>
-              <option value="Suspect4">Suspect4</option>
-              <option value="Suspect5">Suspect5</option>
-              <option value="Suspect6">Suspect6</option>
-              <option value="Suspect7">Suspect7</option>
-              <option value="Suspect8">Suspect8</option>
-              <option value="Suspect9">Suspect9</option>
-              <option value="Suspect10">Suspect10</option>
-              <option value="Suspect11">Suspect11</option>
-              <option value="Suspect12">Suspect12</option>
-              <option value="Suspect13">Suspect13</option>
-              <option value="Suspect14">Suspect14</option>
-              <option value="Suspect15">Suspect15</option>
-              <option value="Suspect16">Suspect16</option>
-              <option value="Suspect17">Suspect17</option>
-              <option value="Suspect18">Suspect18</option>
-              <option value="Suspect19">Suspect19</option>
-              <option value="Suspect20">Suspect20</option>
+              <option value="Madonna">Madonna</option>
+              <option value="Paul McCartney">Paul McCartney</option>
+              <option value="Rihanna">Rihanna</option>
+              <option value="Michael Jackson">Michael Jackson</option>
+              <option value="Mariah Carey">Mariah Carey</option>
+              <option value="Elton John">Elton John</option>
+              <option value="Celine Dion">Celine Dion</option>
+              <option value="Eminem">Eminem</option>
+              <option value="Whitney Houston">Whitney Houston</option>
+              <option value="Garth Brooks">Garth Brooks</option>
+              <option value="Taylor Swift">Taylor Swift</option>
+              <option value="Billy Joel">Billy Joel</option>
+              <option value="Barbra Streisand">Barbra Streisand</option>
+              <option value="Phil Collins">Phil Collins</option>
+              <option value="Britney Spears">Britney Spears</option>
+              <option value="Frank Sinatra">Frank Sinatra</option>
+              <option value="Lady Gaga">Lady Gaga</option>
+              <option value="Kanye West">Kanye West</option>
+              <option value="Janet Jackson">Janet Jackson</option>
+              <option value="Bruce Springsteen">Bruce Springsteen</option>
             </select>
-            <button id='warrant-button'>Submit</button>
+            <button id='warrant-button' class='hover'>Submit</button>
           </div>
         </div>
         <div id='warrant-response' class='call-screen'></div>

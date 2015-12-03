@@ -143,10 +143,13 @@ h4{
   text-decoration: underline;
   text-align: center;
 }
+.hover:hover{
+  cursor: pointer;
+}
 
 /* First App */
 #phone{
-  background-color: #E6E6E6;
+  background-color: #72bcd4;
   color: black;
   font-family: "Trebuchet MS", Helvetica, sans-serif;
   font-size: 20px;
@@ -280,20 +283,50 @@ button{
 }
 
 /* Sixth App */
-#investigate{
-  background-color: #202020;
-}
 #six{
   font-size: 20px;
-  background-color: purple;
   background: radial-gradient(rgba(102,51,153,1), rgba(51,51,153,.75));
-
+}
+#investigate{
+  background: radial-gradient(rgba(102,51,153,1), rgba(51,51,153,.75));
+  font-family: 'Indie Flower', cursive;
+  font-size: 40px;
+}
+#investigate h4{
+  margin: 10px;
+}
+ol{
+  margin: 20px 0;
+}
+#invest-list li{
+  list-style-type: decimal;
+  margin-left: 0px;
+  font-size: 20px;
+}
+.listrike{
+  text-decoration: line-through;
 }
 
 /* Seventh App */
 #wikipedia{
-  background-color: beige;
+  background-color: white;
   color: black;
+}
+#wikipedia h4{
+  font-size: 30px;
+  font-family: Georgia, serif;
+  margin: 25px 0;
+}
+#wikipedia p{
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: underline;
+}
+#wikichoices{
+  display: block;
+}
+.wikipage{
+  display: none;
 }
 
 /* Eighth App */
@@ -344,11 +377,11 @@ button{
   display: block;
 }
 #city-div{
-  width: 300px;
+  width: 350px;
   height: 40px;
   position: absolute;
   background-color: #121f2f;
-  margin-left: 20%;
+  margin-left: 18%;
   border: 5px solid #B81D18;
   border-top: none;
   border-radius: 0 0 25px 25px;
@@ -389,6 +422,7 @@ p{
   height: 100%;
   display: none;
   background-color: #202020;
+  overflow: scroll;
 }
 #calling{
   font-size: 40px;
@@ -401,6 +435,14 @@ p{
   text-align: center;
   padding: 150px 10px 150px 10px;
   display: none;
+}
+#help-call{
+  font-size: 15px;
+  text-align: left;
+  padding: 10px;
+}
+#help-call p{
+  padding: 8px;
 }
 #warrant-inputs{
   margin-left: 125px;
