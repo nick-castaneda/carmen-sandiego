@@ -47,21 +47,22 @@
         <!--Home is the main div that holds all the app icons-->
         <div id='home'><div class="row" id="app-row">
           <div class='col-sm-4'>
-            <div class='outer-box'><div id='one' class='app hover'><img class='app-logo' src='images/sm-apps/sm-phone.png'></div>
-            <div class='outer-box'><div id='4' class='app hover'><img class='app-logo' src='images/sm-apps/sm-jetblue.png'></div>
-            <div class='outer-box'><div id='7' class='app hover' ><img class='app-logo' src='images/sm-apps/sm-wiki.png' style='background-color: white'></div>
+            <div id='one' class='app hover'><img class='app-logo' src='images/sm-apps/sm-phone.png'></div>
+            <div id='4' class='app hover'><img class='app-logo' src='images/sm-apps/sm-jetblue.png'></div>
+            <div id='7' class='app hover' ><img class='app-logo' src='images/sm-apps/sm-wiki.png' style='background-color: white'></div>
           </div>
           <div class='col-sm-4'>
-            <div class='outer-box'><div id='two' class='app hover'><p id='cdappp'>Criminal Database</p></div>
-            <div class='outer-box'><div id='five' class='app hover'><img class='app-logo' id='ytlogo' src='images/sm-apps/sm-youtube.png'></div>
-            <div class='outer-box'><div id='eight' class='app hover'><img id='eight-logo' class='app-logo' src='images/sm-apps/sm-maps.png'></div>
+            <div id='two' class='app hover'><p id='cdappp'>Criminal Database</p></div>
+            <div id='five' class='app hover'><img class='app-logo' id='ytlogo' src='images/sm-apps/sm-youtube.png'></div>
+            <div id='eight' class='app hover'><img id='eight-logo' class='app-logo' src='images/sm-apps/sm-maps.png'></div>
           </div>
           <div class='col-sm-4'>
-            <div class='outer-box'><div id='3' class='app hover'><img class='app-logo' src='images/sm-apps/sm-notepad.jpeg'></div>
-            <div class='outer-box'><div id='six' class='app hover'>Inve<br>stig<br>ate!</div>
-            <div class='outer-box'><div id='9' class='app hover'><img class='app-logo' src='images/sm-apps/sm-translate.jpg'></div>
+            <div id='3' class='app hover'><img class='app-logo' src='images/sm-apps/sm-notepad.jpeg'></div>
+            <div id='six' class='app hover'>Inve<br>stig<br>ate!</div>
+            <div id='9' class='app hover'><img class='app-logo' src='images/sm-apps/sm-translate.jpg'></div>
           </div>
         </div></div>
+
         <!--Phone-->
         <div id='phone' class='app-display'>
           <h4>Contacts</h4><hr id='thick'>
@@ -70,6 +71,7 @@
           <p id='call-warrant' class='hover'>Warrant</p><hr>
           <p id='call-ncs' class='hover'>Notorious Crime Syndicate</p><hr>
         </div>
+
         <!--Criminal Database-->
         <div id='crim-database' class='app-display'>
           <h4>Criminal Database</h4>
@@ -113,14 +115,15 @@
             </div>
           </div>
           <div id='cdrsubmit' class='cdr'>
-            <button id='cdsubmit' class='hover' type="submit">Search Database</button>
+            <br><button id='cdsubmit' class="btn btn-secondary btn-sm hover" type="submit">Search Database</button><br>
           </div>
         </div>
         <div id='crim-database-results' class='app-display'>
           <h4>Possible Suspects:</h4>
           <p id='possible-suspects'></p>
-          <button id='back' class='hover' type="submit">Back</button>
+          <br><button id='back' class="btn btn-secondary btn-sm hover" type="submit">Back</button>
         </div>
+
         <!--Notepad is the div that holds the notepad app-->
         <div id='notepad' class='app-display'>
           <h4 id='n-title'>Case Notes</h4>
@@ -138,6 +141,7 @@
           <p id='n11' class="n-line"></p><hr>
           <p id='n12' class="n-line"></p><hr>
         </div>
+
         <!--Travel is the div that allows the user to switch locations-->
         <div id='travel' class='app-display'>
           <h4>jetBlue</h4>
@@ -154,10 +158,12 @@
             <li id='seoul' class='hover'>Seoul</li>
           </ul>
         </div>
+
         <!--Youtube-->
         <div id='youtube' class='app-display'>
-          <iframe width='100%' height='425px' src="https://www.youtube.com/embed/MDStH49W5Hk" frameborder="0" allowfullscreen></iframe>
+          <iframe width='100%' height='100%' src="https://www.youtube.com/embed/MDStH49W5Hk" frameborder="0" allowfullscreen></iframe>
         </div>
+
         <!--Investigate-->
         <div id='investigate' class='app-display'>
           <h4>Things to Investigate:</h4>
@@ -167,6 +173,7 @@
             <li id='local-police' class='hover'></li>
           </ol>
         </div>
+
         <!--Wikipedia-->
         <div id='wikipedia' class='app-display'>
           <div id='wikichoices'>
@@ -189,18 +196,23 @@
           <iframe id='parapros-page' class='wikipage' width='100%' height='425px' src="https://en.m.wikipedia.org/wiki/Paraprosdokian" frameborder="0" allowfullscreen></iframe>
           <iframe id='potential-page' class='wikipage' width='100%' height='425px' src="https://en.m.wikipedia.org/wiki/Potential_cultural_impact_of_extraterrestrial_contact" frameborder="0" allowfullscreen></iframe>
         </div>
+
         <!--Map is the div that holds google maps-->
         <div id='map' class='app-display'><iframe id='custmap' src="http://www.google.com/maps/d/embed?mid=z7ubLVpryhZs.kBJlLyx0GXFY&z=2&center=23,-36"></iframe></div>
+
         <!--Google Translate-->
         <div id='translate' class='app-display'>
           <iframe id='bt' src='http://www.bing.com/translator/'></iframe>
         </div>
+
       </div>
+
       <div id='phone-title' class='hover'><div id='square'></div></div>
     </div>
   </div>
 
   <div class="col-sm-8">
+
     <!--Divs for the image window-->
     <div id='picture'>
       <div id='no-call'>
@@ -210,6 +222,7 @@
           <div id='character'><img id='characterimage' src=''></div>
         </div>
       </div>
+
       <!--Div for phone call over image window-->
       <div id='phone-call'>
         <div id='calling'>calling ...</div>
@@ -259,6 +272,7 @@
         <div id='warrant-response' class='call-screen'></div>
       </div>
     </div>
+
     <!--Divs for the text window-->
     <div id='text'>
       <h3 id='info-title'></h3>

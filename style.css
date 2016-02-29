@@ -58,17 +58,17 @@ li{
 }
 #phone-title{
   text-align: center;
-  width: 40px;
-  height: 40px;
+  width: 60px;
+  height: 60px;
   margin: 0 auto;
   border-radius: 60px;
   border: 2px solid black;
 }
 #square{
   border: 1px solid black;
-  width: 20px;
-  height: 20px;
-  margin: 8px;
+  width: 30px;
+  height: 30px;
+  margin: 13px;
   border-radius: 5px;
 }
 
@@ -82,7 +82,7 @@ li{
   border-radius: 5px;
 }
 #phone-screen{
-  height: 85%;
+  height: 80%;
   width: 90%;
   margin: 3% auto;
   margin-bottom: 10px;
@@ -100,6 +100,9 @@ li{
   text-align: center;
   padding: 0;
 }
+#two{
+  margin-top: -5px;
+}
 a{
   text-decoration: none;
   color: black;
@@ -112,11 +115,13 @@ a{
 /* General app screen */
 .app-display{
   height: 100%;
-  width: 99%;
+  width: 100%;
   margin: -1px;
   display: none;
   border-radius: 5px;
   border: 2px solid black;
+  padding: 5px;
+  overflow: scroll;
 }
 h4{
   text-decoration: underline;
@@ -131,11 +136,11 @@ h4{
   background-color: #72bcd4;
   color: black;
   font-family: "Trebuchet MS", Helvetica, sans-serif;
-  font-size: 20px;
+  font-size: 18px;
 }
 #phone h4{
   text-decoration: none;
-  font-size: 30px;
+  font-size: 28px;
   margin: 20px;
 }
 #phone p{
@@ -158,12 +163,12 @@ h4{
 }
 .cdr{
   height: 150px;
-  margin-top: 1px;
+  margin: 1px 0 -20px 10px;
 }
 .cds{
   height: 100%;
   width: 45%;
-  margin: 5px;
+  margin: 5px 0 0 0;
   display: inline-block;
 }
 #cdr1{
@@ -173,10 +178,6 @@ h4{
 #cdrsubmit{
   height: 40px;
   width: 100%;
-}
-button{
-  margin: 15px 125px 0 125px;
-  width: 125px;
 }
 #crim-database-results{
   display: none;
@@ -204,12 +205,18 @@ button{
   font-size: 14px;
   cursor: pointer;
 }
+#possible-suspects{
+  margin: 15px;
+}
 
 /* Third App */
 #notepad{
   background-color: #F3F781;
   height: 100%;
   width: 100%;
+}
+#notepad hr{
+  margin: 0;
 }
 #n-title{
   color: black;
@@ -218,9 +225,9 @@ button{
 }
 .n-line{
   color: black;
-  height: 15px;
+  height: 7%;
   margin: 0 0 0 10px;
-  font-size: 15px;
+  font-size: 100%;
   text-align: top;
   font-weight: 700;
   font-family: 'Indie Flower', cursive;
@@ -235,14 +242,14 @@ button{
   background-color: #061F5C;
   height: 40px;
   margin: 0px;
-  padding: 15px 0 0 0 ;
+  padding: 3px 0 0 0 ;
   font-size: 30px;
   text-decoration: none;
 }
 #travel li{
   border-top: 1px solid white;
   margin: 0 0 0 -40px;
-  padding: 5px 0 0 40px;
+  padding: 3px 0 0 40px;
   font-size: 20px;
   height: 30px;
 }
@@ -252,13 +259,14 @@ button{
 
 /* Fifth App */
 #youtube{
-  height: 400px;
+  height: 100%;
   width: 100%
 }
 #ytlogo{
-    width: 90px;
-    height: 90px;
-    margin: -5px;
+  width: 110%;
+  height: 110%;
+  margin-top: -5px;
+  margin-left: -5px;
 }
 
 /* Sixth App */
@@ -297,7 +305,9 @@ ol{
   margin: 25px 0;
 }
 #wikipedia p{
+  margin-left: 5px;
   font-size: 15px;
+  line-height: 18px;
   font-family: Arial, Helvetica, sans-serif;
   text-decoration: underline;
 }
@@ -314,9 +324,10 @@ ol{
   background-color: #121f2f;
 }
 #eight-logo{
-  width: 90px;
-  height: 90px;
-  margin: -5px;
+  width: 110%;
+  height: 110%;
+  margin-top: -5px;
+  margin-left: -5px;
 }
 #custmap{
   width: 100%;
@@ -333,14 +344,7 @@ ol{
   height: 100%;
   width: 100%;
   border: 0;
-/*  background-color: white; */
 }
-
-/* Tenth App */
-#music{
-  background-color: teal;
-}
-
 
 /******************** Right Styling and Structure ********************/
 #picture{
@@ -356,11 +360,11 @@ ol{
   display: block;
 }
 #city-div{
-  width: 350px;
-  height: 40px;
+  width: 40%;
+  height: 6vh;
   position: absolute;
   background-color: #121f2f;
-  margin-left: 18%;
+  margin-left: 30%;
   border: 5px solid silver;
   border-top: none;
   border-radius: 0 0 25px 25px;
@@ -369,7 +373,7 @@ ol{
   text-align: center;
   vertical-align: top;
   font-size: 14px;
-  margin-top: 8px;
+  margin-top: 5px;
 }
 #image-div{
   width: 100%;
@@ -380,10 +384,10 @@ ol{
 }
 #character{
   position: absolute;
-/*  height: 400px;
-  width: 250px;*/
+  height: 75%;
+  width: 15%;
   float: right;
-  margin: -403px 0 0 629px;
+  margin-right: 15%;
 }
 #text{
   width: 100%;
