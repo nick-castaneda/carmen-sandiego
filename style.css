@@ -384,10 +384,11 @@ ol{
 }
 #character{
   position: absolute;
-  height: 75%;
+  height: 45vh;
   width: 15%;
   float: right;
-  margin-right: 15%;
+  right: 10%;
+  bottom: 35.5vh;
 }
 #text{
   width: 100%;
@@ -408,6 +409,9 @@ p{
   margin: 10px;
   line-height: 25px
 }
+#info-text{
+  margin: 0 10px;
+}
 
 /**************************** Phone Calls ****************************/
 #phone-call{
@@ -420,13 +424,13 @@ p{
 #calling{
   font-size: 40px;
   text-align: center;
-  padding: 200px 0 200px 0;
+  padding: 25vh 0 25vh 0;
   display: none;
 }
 .call-screen{
   font-size: 20px;
   text-align: center;
-  padding: 150px 10px 150px 10px;
+  padding: 20vh 25px 20vh 25px;
   display: none;
 }
 #help-call{
