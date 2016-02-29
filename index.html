@@ -2,15 +2,20 @@
 <html>
 <head>
   <title>Carmen Sandiego</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <meta charset="UTF-8">
   <link rel="shortcut icon" href="images/favicon.ico">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <link href='https://fonts.googleapis.com/css?family=Droid+Sans+Mono' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </head>
 <body>
-<div id="myModal" class="modal">
 
+<div id="myModal" class="modal">
   <!-- Modal content -->
   <div class="modal-content">
     <span class="close">x</span>
@@ -19,11 +24,10 @@
     <input type='text' id='nameInput'>
     <button id='nameSubmit' class='hover' type="submit">Submit</button>
   </div>
-
 </div>
-<div id='screen'>
-  <div id='screen-left'>
 
+<div class="row" id="screen">
+  <div class="col-md-4" id='screen-left'>
     <!--Divs for the Stats box-->
     <div id='stats'>
       <div id='logo'><img src='images/characters/carmenlogo.png'></div>
@@ -209,7 +213,7 @@
     </div>
   </div>
 
-  <div id='screen-right'>
+  <div class="col-md-8" id='screen-right'>
     <!--Divs for the image window-->
     <div id='picture'>
       <div id='no-call'>
@@ -275,7 +279,9 @@
       <p id='info-text'></p>
     </div>
   </div>
+
 </div>
+
 <script src="https://maps.googleapis.com/maps/api/js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="script.js"></script>

@@ -159,7 +159,7 @@ var suspect20 = new Suspect('Bruce Springsteen','male','white','brownn','puppy',
 // Array for the set of all remaining suspects and guilty suspect var,
 // which I'm pretty sure isn't used.
 var allSuspects = [suspect1,suspect2,suspect3,suspect4,suspect5,suspect6,suspect7,suspect8,suspect9,suspect10,suspect11,suspect12,suspect13,suspect14,suspect15,suspect16,suspect17,suspect18,suspect19,suspect20];
-var guiltySuspect = '';
+
 
 // This function returns an array of all the suspect attributes that are
 // not striked by the user.
@@ -183,13 +183,13 @@ function filterSuspects(){
   var possibleSuspectsString = '';
   checkArray = attributeCheck();
   for(i=0;i<possibleSuspects.length;i++){
-    var counter = 0
+    var counter = 0;
     for(j=0;j<checkArray.length;j++){
-      if(possibleSuspects[i].sex === checkArray[j].toLowerCase()){counter ++;}
-      if(possibleSuspects[i].hair === checkArray[j].toLowerCase()){counter ++;}
-      if(possibleSuspects[i].eyes === checkArray[j].toLowerCase()){counter ++;}
-      if(possibleSuspects[i].feature === checkArray[j].toLowerCase()){counter ++;}
-      if(possibleSuspects[i].vehicle === checkArray[j].toLowerCase()){counter ++;}
+      if(possibleSuspects[i].sex === checkArray[j].toLowerCase()){ counter ++; }
+      if(possibleSuspects[i].hair === checkArray[j].toLowerCase()){ counter ++; }
+      if(possibleSuspects[i].eyes === checkArray[j].toLowerCase()){ counter ++; }
+      if(possibleSuspects[i].feature === checkArray[j].toLowerCase()){ counter ++; }
+      if(possibleSuspects[i].vehicle === checkArray[j].toLowerCase()){ counter ++; }
     }
     if(counter === 5){
       possibleSuspectsString += possibleSuspects[i].name;
@@ -604,6 +604,8 @@ $('#10').click(function(){
 // For each phone call function, the right screen shows the text
 // "calling ..." for 2.5 seconds and then displays the text of the phone
 // call.
+
+// CLEANUP
 $('#call-office').click(function(){
   $('#no-call').css('display','none');
   $('.call-screen').css('display','none');
